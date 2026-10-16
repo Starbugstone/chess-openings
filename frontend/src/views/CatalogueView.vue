@@ -34,6 +34,11 @@ const families = [
   'Grünfeld Defense',
   'Benoni Defense',
   'Tarrasch Defense',
+  "Queen's Indian Defense",
+  'Bogo-Indian Defense',
+  'Semi-Slav Defense',
+  'Two Knights Defense',
+  'English Opening',
 ]
 /** Only expanded entries mount a board; each remembers which recorded sequence it shows. */
 const expanded = reactive(new Map<string, number>())
