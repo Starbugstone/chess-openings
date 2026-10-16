@@ -116,6 +116,13 @@ watch(
   ],
   () => board?.set(configuration()),
 )
+// Chessground caches the board rectangle and refreshes it only on scroll, window resize or a
+// board resize. Content above the board (a wrapping toolbar label, notices) can move it without
+// any of those, so a stale rectangle would map taps to the neighbouring square. Re-measure as
+// each tap or drag starts; the capture listener runs before Chessground's own handler.
+function refreshBounds() {
+  board?.state.dom.bounds.clear()
+}
 onBeforeUnmount(() => {
   motionPreference?.removeEventListener('change', updateMotion)
   board?.destroy()
@@ -130,6 +137,8 @@ onBeforeUnmount(() => {
     :class="{ 'is-read-only': readOnly }"
     :role="readOnly ? 'img' : 'group'"
     :aria-label="t(label)"
+    @touchstart.capture.passive="refreshBounds"
+    @mousedown.capture="refreshBounds"
   />
 </template>
 

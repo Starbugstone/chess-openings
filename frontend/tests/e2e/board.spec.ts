@@ -25,30 +25,59 @@ test('board input, illegal moves, orientation, undo and restart stay in sync', a
   expect(errors).toEqual([])
 })
 
+async function tapSquare(page: Page, mobile: boolean, file: number, rank: number) {
+  // Absolute points: locator actions would scroll first, and scrolling refreshes Chessground's
+  // cached bounds by itself, hiding stale-bounds defects. White orientation, a=0..h=7, 1..8.
+  const bounds = await page.locator('cg-board').boundingBox()
+  if (!bounds) throw new Error('Board not mounted')
+  const x = bounds.x + (bounds.width * (file + 0.5)) / 8
+  const y = bounds.y + (bounds.height * (8.5 - rank)) / 8
+  await (mobile ? page.touchscreen.tap(x, y) : page.mouse.click(x, y))
+}
+
 test('tap-to-move validates through chess.js', async ({ page }, testInfo) => {
+  const mobile = testInfo.project.name === 'mobile'
+  await page.goto('/dev/board')
+  const board = page.locator('cg-board')
+  await board.scrollIntoViewIfNeeded()
+  await tapSquare(page, mobile, 4, 2)
+  await expect(board.locator('square.move-dest')).toHaveCount(2)
+  await tapSquare(page, mobile, 4, 4)
+  await expect(page.getByRole('status')).toHaveText('Played e4.')
+})
+
+test('taps stay on the right square after content above the board moves it', async ({
+  page,
+}, testInfo) => {
+  const mobile = testInfo.project.name === 'mobile'
+  // Tall enough that the shifted board stays in view, so nothing scrolls or resizes.
+  if (!mobile) await page.setViewportSize({ width: 1280, height: 1400 })
   await page.goto('/dev/board')
   const board = page.locator('cg-board')
   await expect(board).toBeVisible()
-  await page.evaluate(() => document.fonts.ready.then(() => undefined))
-  await board.scrollIntoViewIfNeeded()
-  // Scroll events invalidate Chessground's cached bounds before coordinate input.
-  await page.evaluate(
-    () =>
-      new Promise<void>((resolve) =>
-        requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
-      ),
-  )
-  const bounds = await board.boundingBox()
-  if (!bounds) throw new Error('Board not mounted')
-  // Chessground exposes a single drawing surface, so square interactions use board-relative points.
-  const tap = (x: number, y: number) =>
-    testInfo.project.name === 'mobile'
-      ? board.tap({ position: { x, y } })
-      : board.click({ position: { x, y } })
-  await tap((bounds.width * 4.5) / 8, (bounds.height * 6.5) / 8)
-  await expect(board.locator('square.move-dest')).toHaveCount(2)
-  await tap((bounds.width * 4.5) / 8, (bounds.height * 4.5) / 8)
+  await tapSquare(page, mobile, 4, 2)
+  await tapSquare(page, mobile, 4, 4)
   await expect(page.getByRole('status')).toHaveText('Played e4.')
+
+  const before = await board.boundingBox()
+  if (!before) throw new Error('Board not mounted')
+  // One square of new content above the board, like a toolbar label wrapping onto two lines.
+  const scrollY = await page.evaluate((height) => {
+    const spacer = document.createElement('div')
+    spacer.style.height = `${height}px`
+    document.querySelector('.lab-grid')?.before(spacer)
+    return window.scrollY
+  }, before.height / 8)
+  const after = await board.boundingBox()
+  if (!after) throw new Error('Board not mounted')
+  expect(after.y - before.y).toBeCloseTo(before.height / 8, 0)
+  expect(after.width).toBe(before.width)
+  expect(await page.evaluate(() => window.scrollY)).toBe(scrollY)
+
+  await tapSquare(page, mobile, 4, 7)
+  await expect(board.locator('square.move-dest')).toHaveCount(2)
+  await tapSquare(page, mobile, 4, 5)
+  await expect(page.getByRole('status')).toHaveText('Played e5.')
 })
 
 test('dragging a piece advances the same authoritative position', async ({ page }, testInfo) => {
