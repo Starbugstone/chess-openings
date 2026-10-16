@@ -57,3 +57,12 @@ The owner asked that the openings have enough moves. Six current lines gave the 
 
 The owner asked for more training courses. Nine new courses (`Version20261016020000`–`020800`) teach nineteen complete named records at the pinned SHA, from 17 to 26 plies, each giving the learner at least nine moves. Scotch Game, Four Knights Game and Evans Gambit are White courses; Petrov's Defense, Alekhine Defense, Nimzo-Indian Defense, Grünfeld Defense, Benoni Defense and Tarrasch Defense are Black defences. They use the same imported-path validation and add no authored graph facts. Bootstrap now publishes 19 courses, 65 stored lines and 1,269 steps; the current curriculum has 44 lines. See [NAMED_LINES_PHASE_5.md](lessons/NAMED_LINES_PHASE_5.md).
 
+
+## Phase 6: four more courses and longer courses (2026-10-16)
+
+The owner asked for many more lessons. `Version20261016030000`–`032000` (20 migrations) add four courses, publish new revisions of sixteen courses and correct four published notes:
+- **New courses:** Queen's Indian and Bogo-Indian, Semi-Slav Defense and Two Knights Defense for Black; English Opening for White.
+- **New lines:** 48 new complete named records (17–26 plies, at least nine learner moves each). 12 are in the new courses; the other 36 are appended to sixteen existing courses, and each new revision keeps every current line in place.
+- **Corrections to published notes:** the Czech Slav 5. a4 and 10. g4, the Meran ...Nbd7 and the King's Indian 7...Nc6 notes. Each correction re-authors its line with the same ID and path and changes only the faulty sentence.
+
+The migrations use the same imported-path validation and add no authored graph facts. All new teaching text was fact-checked against the position and translated into French and Spanish. Bootstrap now publishes 23 courses, 151 stored lines and 3,080 steps; the current curriculum has 92 lines. See [NAMED_LINES_PHASE_6.md](lessons/NAMED_LINES_PHASE_6.md).

@@ -30,6 +30,26 @@ use AppMigrations\LessonData\Version20261016020500;
 use AppMigrations\LessonData\Version20261016020600;
 use AppMigrations\LessonData\Version20261016020700;
 use AppMigrations\LessonData\Version20261016020800;
+use AppMigrations\LessonData\Version20261016030000;
+use AppMigrations\LessonData\Version20261016030100;
+use AppMigrations\LessonData\Version20261016030200;
+use AppMigrations\LessonData\Version20261016030300;
+use AppMigrations\LessonData\Version20261016030400;
+use AppMigrations\LessonData\Version20261016030500;
+use AppMigrations\LessonData\Version20261016030600;
+use AppMigrations\LessonData\Version20261016030700;
+use AppMigrations\LessonData\Version20261016030800;
+use AppMigrations\LessonData\Version20261016030900;
+use AppMigrations\LessonData\Version20261016031100;
+use AppMigrations\LessonData\Version20261016031200;
+use AppMigrations\LessonData\Version20261016031300;
+use AppMigrations\LessonData\Version20261016031400;
+use AppMigrations\LessonData\Version20261016031500;
+use AppMigrations\LessonData\Version20261016031600;
+use AppMigrations\LessonData\Version20261016031700;
+use AppMigrations\LessonData\Version20261016031800;
+use AppMigrations\LessonData\Version20261016031900;
+use AppMigrations\LessonData\Version20261016032000;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -90,6 +110,57 @@ final class FrozenLessonPathsTest extends TestCase
         'benoni/1/four-pawns-main-line' => [20, 'd4 Nf6 c4 c5 d5 e6 Nc3 exd5 cxd5 d6 e4 g6 f4 Bg7 Nf3 O-O Be2 Nbd7 O-O Re8'],
         'tarrasch/1/classical-main-line' => [22, 'd4 d5 c4 e6 Nc3 c5 cxd5 exd5 Nf3 Nc6 g3 Nf6 Bg2 Be7 O-O O-O Bg5 cxd4 Nxd4 h6 Be3 Re8'],
         'tarrasch/1/classical-advance' => [18, 'd4 d5 c4 e6 Nc3 c5 cxd5 exd5 Nf3 Nc6 g3 Nf6 Bg2 Be7 O-O O-O Bg5 c4'],
+        'nimzo-indian/2/gligoric-isolated-pawn' => [18, 'd4 Nf6 c4 e6 Nc3 Bb4 e3 O-O Bd3 d5 Nf3 c5 O-O Nc6 a3 dxc4 Bxc4 cxd4'],
+        'nimzo-indian/2/st-petersburg-fianchetto' => [18, 'd4 Nf6 c4 e6 Nc3 Bb4 e3 b6 Bd3 Bb7 Nf3 O-O O-O c5 Na4 cxd4 a3 Be7'],
+        'queens-indian/1/spassky-isolated-pawn' => [18, 'd4 Nf6 c4 e6 Nf3 b6 e3 Bb7 Bd3 c5 Nc3 cxd4 exd4 Be7 O-O d5 cxd5 Nxd5'],
+        'queens-indian/1/bogo-retreat' => [20, 'd4 Nf6 c4 e6 Nf3 d5 g3 Bb4+ Bd2 Be7 Bg2 O-O O-O c6 Qc2 Nbd7 Bf4 b6 Nbd2 Ba6'],
+        'grunfeld/2/modern-exchange-pawn-grab' => [20, 'd4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 Nf3 c5 Rb1 O-O Be2 Nc6 d5 Bxc3+'],
+        'benoni/2/classical-argentine' => [20, 'd4 Nf6 c4 e6 Nf3 c5 d5 exd5 cxd5 d6 Nc3 g6 e4 Bg7 Be2 O-O O-O a6 a4 Bg4'],
+        'benoni/2/fianchetto-hastings' => [22, 'd4 Nf6 c4 e6 g3 c5 d5 exd5 cxd5 d6 Nc3 g6 Bg2 Bg7 Nf3 O-O O-O a6 a4 Nbd7 Nd2 Re8'],
+        'semi-slav/1/meran-wade-larsen' => [22, 'd4 d5 c4 c6 Nc3 Nf6 e3 e6 Nf3 Nbd7 Bd3 dxc4 Bxc4 b5 Bd3 Bb7 e4 b4 Na4 c5 e5 Nd5'],
+        'semi-slav/1/meran-chigorin-bd6' => [21, 'd4 d5 c4 c6 Nc3 Nf6 e3 e6 Nf3 Nbd7 Bd3 dxc4 Bxc4 b5 Bd3 Bd6 O-O Bb7 a3 O-O Qc2'],
+        'semi-slav/1/meran-early-a6' => [20, 'd4 d5 c4 e6 Nc3 c6 e3 Nf6 Nf3 a6 Bd3 dxc4 Bxc4 b5 Bd3 c5 O-O Bb7 Qe2 Nbd7'],
+        'semi-slav/1/botvinnik-lilienthal' => [21, 'd4 d5 c4 c6 Nf3 Nf6 Nc3 e6 Bg5 dxc4 e4 b5 e5 h6 Bh4 g5 Nxg5 hxg5 Bxg5 Nbd7 g3'],
+        'semi-slav/1/anti-meran-qc2' => [19, 'd4 d5 c4 c6 Nf3 Nf6 Nc3 e6 e3 Nbd7 Qc2 Bd6 e4 dxe4 Nxe4 Nxe4 Qxe4 e5 dxe5'],
+        'tarrasch/2/reti-dxc5' => [19, 'd4 d5 c4 e6 Nc3 c5 cxd5 exd5 Nf3 Nc6 g3 Nf6 Bg2 Be7 O-O O-O dxc5 Bxc5 Na4'],
+        'tarrasch/2/stoltz-b6' => [20, 'd4 d5 c4 e6 Nf3 c5 cxd5 exd5 g3 Nc6 Bg2 Nf6 O-O Be7 Nc3 O-O Bg5 Be6 Rc1 b6'],
+        'slav/3/czech-main-line' => [19, 'd4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5 e3 e6 Bxc4 Bb4 O-O O-O Qe2 Ne4 g4'],
+        'slav/3/semi-slav-meran' => [29, 'd4 d5 c4 c6 Nc3 Nf6 Nf3 e6 e3 Nbd7 Bd3 dxc4 Bxc4 b5 Bd3 a6 e4 c5 e5 cxd4 Nxb5 Nxe5 Nxe5 axb5 O-O Qd5 Qe2 Ba6 Bg5'],
+        'slav/3/czech-morozevich' => [22, 'd4 d5 c4 c6 Nf3 Nf6 Nc3 dxc4 a4 Bf5 Ne5 Nbd7 Nxc4 Qc7 g3 e5 dxe5 Nxe5 Bf4 Nfd7 Bg2 g5'],
+        'alekhine/2/four-pawns-korchnoi' => [20, 'e4 Nf6 e5 Nd5 d4 d6 c4 Nb6 f4 dxe5 fxe5 Bf5 Nc3 e6 Nf3 Be7 Be2 O-O O-O f6'],
+        'caro-kann/4/classical-seirawan' => [24, 'e4 c6 d4 d5 Nd2 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 h6 Nf3 Nd7 h5 Bh7 Bd3 Bxd3 Qxd3 Ngf6 Bd2 e6 O-O-O Bd6'],
+        'french/4/winawer-poisoned-pawn' => [19, 'e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 Qg4 Qc7 Qxg7 Rg8 Qxh7 cxd4 Ne2'],
+        'french/4/steinitz-brodsky-jones' => [18, 'e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 dxc5 Nc6 a3 Bxc5 Qg4 O-O Nf3 f6'],
+        'four-knights/2/classical-bardeleben' => [18, 'e4 e5 Nf3 Nc6 Nc3 Nf6 Bb5 Bc5 O-O O-O Nxe5 Nxe5 d4 Bd6 f4 Nc6 e5 Bb4'],
+        'evans-gambit/2/paulsen-variation' => [20, 'e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Bc5 d4 exd4 O-O d6 cxd4 Bb6 d5 Na5 Bb2 Ne7'],
+        'evans-gambit/2/compromised-defense' => [21, 'e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 exd4 O-O dxc3 Qb3 Qf6 e5 Qg6 Nxc3 Nge7 Ba3'],
+        'two-knights/1/polerio-goring' => [20, 'e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 Bb5+ c6 dxc6 bxc6 Be2 h6 Nf3 e4 Ne5 Qc7'],
+        'two-knights/1/polerio-yankovich' => [19, 'e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Na5 d3 h6 Nf3 e4 Qe2 Nxc4 dxc4 Bc5 Nfd2'],
+        'two-knights/1/max-lange-berger' => [26, 'e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 d5 exf6 dxc4 Re1+ Be6 Ng5 Qd5 Nc3 Qf5 g4 Qg6 Nce4 Bb6 f4 O-O-O'],
+        'two-knights/1/max-lange-rubinstein' => [22, 'e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 d5 exf6 dxc4 Re1+ Be6 Ng5 Qd5 Nc3 Qf5 Nce4 Bf8'],
+        'ruy-lopez/2/zaitsev-hybrid' => [24, 'e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Bb7 d4 Re8 Nbd2 Bf8 a3 h6'],
+        'ruy-lopez/2/open-breslau' => [22, 'e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 c3 Be7 Re1 O-O Nd4 Nxe5'],
+        'ruy-lopez/2/open-howell-ekstrom' => [24, 'e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Nxe4 d4 b5 Bb3 d5 dxe5 Be6 Qe2 Be7 Rd1 O-O c4 bxc4 Bxc4 Qd7'],
+        'ruy-lopez/2/berlin-wall' => [18, 'e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 Nd6 Bxc6 dxc6 dxe5 Nf5 Qxd8+ Kxd8 Nc3 Bd7'],
+        'scotch/2/steinitz-rosenthal' => [18, 'e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qh4 Nb5 Bb4+ Bd2 Qxe4+ Be2 Kd8 O-O Bxd2 Nxd2 Qg6'],
+        'scotch/2/scotch-gambit-anderssen' => [21, 'e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Nxe4 Re1 d5 Bxd5 Qxd5 Nc3 Qa5 Nxe4 Be6 Bd2 Qd5 Bg5'],
+        'sicilian/2/richter-rauzer' => [20, 'e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bg5 e6 Qd2 Be7 O-O-O Nxd4 Qxd4 a6 f4 b5'],
+        'sicilian/2/sozin-sherbakov' => [20, 'e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bc4 e6 Be3 Be7 Bb3 O-O O-O Na5 f4 b6'],
+        'sicilian/2/scheveningen-classical' => [20, 'e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nc3 Qc7 Be2 a6 O-O Nf6 Be3 Be7 f4 d6 Qe1 O-O'],
+        'sicilian/2/taimanov-modern' => [20, 'e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nc6 Nb5 d6 c4 Nf6 N1c3 a6 Na3 Be7 Be2 O-O O-O b6'],
+        'sicilian/2/alapin-endgame' => [18, 'e4 c5 c3 d5 exd5 Qxd5 d4 cxd4 cxd4 Nc6 Nf3 Bg4 Nc3 Bxf3 gxf3 Qxd4 Qxd4 Nxd4'],
+        'queens-gambit/3/exchange-reshevsky' => [21, 'd4 Nf6 c4 e6 Nc3 d5 cxd5 exd5 Bg5 c6 e3 Be7 Bd3 Nbd7 Nge2 O-O O-O h6 Bh4 Re8 Qc2'],
+        'queens-gambit/3/lasker-bernstein' => [22, 'd4 Nf6 c4 e6 Nc3 d5 Bg5 Be7 e3 h6 Bh4 O-O Nf3 Ne4 Bxe7 Qxe7 cxd5 Nxc3 bxc3 exd5 Qb3 Qd6'],
+        'queens-gambit/3/tartakower-defense' => [22, 'd4 d5 c4 e6 Nc3 Be7 Nf3 Nf6 Bg5 h6 Bh4 O-O e3 b6 cxd5 Nxd5 Bxe7 Qxe7 Nxd5 exd5 Rc1 Be6'],
+        'queens-gambit/3/cambridge-springs' => [17, 'd4 d5 c4 e6 Nc3 Nf6 Bg5 Nbd7 e3 c6 Nf3 Qa5 Nd2 Bb4 Qc2 O-O Bh4'],
+        'catalan/2/closed-zagoryansky' => [17, 'd4 e6 c4 Nf6 Nf3 d5 g3 Be7 Bg2 O-O O-O Nbd7 Qc2 c6 Rd1 b6 a4'],
+        'catalan/2/closed-spassky-gambit' => [20, 'd4 Nf6 c4 e6 g3 Be7 Bg2 d5 Nf3 O-O O-O Nbd7 Qc2 c6 b3 b6 Rd1 Bb7 Nc3 b5'],
+        'english/1/hedgehog-flexible-formation' => [20, 'c4 e6 Nf3 c5 Nc3 Nf6 g3 b6 Bg2 Bb7 O-O Be7 d4 cxd4 Qxd4 d6 Rd1 a6 b3 Nbd7'],
+        'kings-indian/2/classical-main-line' => [27, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 Ne1 Nd7 Be3 f5 f3 f4 Bf2 g5 Rc1 Ng6 c5'],
+        'kings-indian/2/bayonet-sokolov' => [19, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nh5 Re1'],
+        'kings-indian/2/petrosian-keres' => [21, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 d5 Nbd7 Bg5 h6 Bh4 g5 Bg3 Nh5 h4'],
+        'kings-indian/2/positional-defense' => [18, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nbd7 Re1 c6 Bf1 a5'],
+        'kings-indian/2/samisch-bronstein' => [24, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 d5 Nh5 Qd2 Qh4+ g3 Nxg3 Qf2 Nxf1 Qxh4 Nxe3 Ke2 Nxc4'],
     ];
 
     /** @return iterable<string, array{list<array{uci: string, san: string, fromKey: string, toKey: string}>, int, string}> */
@@ -179,6 +250,26 @@ final class FrozenLessonPathsTest extends TestCase
         require_once $migrationRoot.'/LessonData/Version20261016020600.php';
         require_once $migrationRoot.'/LessonData/Version20261016020700.php';
         require_once $migrationRoot.'/LessonData/Version20261016020800.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030000.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030100.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030200.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030300.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030400.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030500.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030600.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030700.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030800.php';
+        require_once $migrationRoot.'/LessonData/Version20261016030900.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031100.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031200.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031300.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031400.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031500.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031600.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031700.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031800.php';
+        require_once $migrationRoot.'/LessonData/Version20261016031900.php';
+        require_once $migrationRoot.'/LessonData/Version20261016032000.php';
 
         /** @var array<string, list<array{uci: string, san: string, fromKey: string, toKey: string}>> $paths */
         $paths = require $migrationRoot.'/Support/Paths20261015.php';
@@ -231,6 +322,57 @@ final class FrozenLessonPathsTest extends TestCase
             'benoni/1/four-pawns-main-line' => [Version20261016020700::class, 'FOUR_PAWNS_MAIN_LINE_FACTS'],
             'tarrasch/1/classical-main-line' => [Version20261016020800::class, 'CLASSICAL_MAIN_LINE_FACTS'],
             'tarrasch/1/classical-advance' => [Version20261016020800::class, 'CLASSICAL_ADVANCE_FACTS'],
+            'nimzo-indian/2/gligoric-isolated-pawn' => [Version20261016030000::class, 'GLIGORIC_FACTS'],
+            'nimzo-indian/2/st-petersburg-fianchetto' => [Version20261016030000::class, 'PETERSBURG_FACTS'],
+            'queens-indian/1/spassky-isolated-pawn' => [Version20261016030100::class, 'SPASSKY_FACTS'],
+            'queens-indian/1/bogo-retreat' => [Version20261016030100::class, 'RETREAT_FACTS'],
+            'grunfeld/2/modern-exchange-pawn-grab' => [Version20261016030200::class, 'PAWN_GRAB_FACTS'],
+            'benoni/2/classical-argentine' => [Version20261016030300::class, 'ARGENTINE_FACTS'],
+            'benoni/2/fianchetto-hastings' => [Version20261016030300::class, 'HASTINGS_FACTS'],
+            'semi-slav/1/meran-wade-larsen' => [Version20261016030400::class, 'WADE_FACTS'],
+            'semi-slav/1/meran-chigorin-bd6' => [Version20261016030400::class, 'CHIGORIN_FACTS'],
+            'semi-slav/1/meran-early-a6' => [Version20261016030400::class, 'A6_MERAN_FACTS'],
+            'semi-slav/1/botvinnik-lilienthal' => [Version20261016030400::class, 'BOTVINNIK_FACTS'],
+            'semi-slav/1/anti-meran-qc2' => [Version20261016030400::class, 'ANTI_MERAN_FACTS'],
+            'tarrasch/2/reti-dxc5' => [Version20261016030500::class, 'RETI_FACTS'],
+            'tarrasch/2/stoltz-b6' => [Version20261016030500::class, 'STOLTZ_FACTS'],
+            'slav/3/czech-main-line' => [Version20261016030600::class, 'CZECH_FACTS'],
+            'slav/3/semi-slav-meran' => [Version20261016030600::class, 'MERAN_FACTS'],
+            'slav/3/czech-morozevich' => [Version20261016030600::class, 'MOROZEVICH_FACTS'],
+            'alekhine/2/four-pawns-korchnoi' => [Version20261016030700::class, 'KORCHNOI_FACTS'],
+            'caro-kann/4/classical-seirawan' => [Version20261016030800::class, 'SEIRAWAN_FACTS'],
+            'french/4/winawer-poisoned-pawn' => [Version20261016030900::class, 'POISONED_FACTS'],
+            'french/4/steinitz-brodsky-jones' => [Version20261016030900::class, 'STEINITZ_FACTS'],
+            'four-knights/2/classical-bardeleben' => [Version20261016031100::class, 'BARDELEBEN_FACTS'],
+            'evans-gambit/2/paulsen-variation' => [Version20261016031200::class, 'PAULSEN_FACTS'],
+            'evans-gambit/2/compromised-defense' => [Version20261016031200::class, 'COMPROMISED_FACTS'],
+            'two-knights/1/polerio-goring' => [Version20261016031300::class, 'GORING_FACTS'],
+            'two-knights/1/polerio-yankovich' => [Version20261016031300::class, 'YANKOVICH_FACTS'],
+            'two-knights/1/max-lange-berger' => [Version20261016031300::class, 'BERGER_FACTS'],
+            'two-knights/1/max-lange-rubinstein' => [Version20261016031300::class, 'RUBINSTEIN_FACTS'],
+            'ruy-lopez/2/zaitsev-hybrid' => [Version20261016031400::class, 'ZAITSEV_FACTS'],
+            'ruy-lopez/2/open-breslau' => [Version20261016031400::class, 'BRESLAU_FACTS'],
+            'ruy-lopez/2/open-howell-ekstrom' => [Version20261016031400::class, 'HOWELL_FACTS'],
+            'ruy-lopez/2/berlin-wall' => [Version20261016031400::class, 'BERLIN_FACTS'],
+            'scotch/2/steinitz-rosenthal' => [Version20261016031500::class, 'ROSENTHAL_FACTS'],
+            'scotch/2/scotch-gambit-anderssen' => [Version20261016031500::class, 'ANDERSSEN_FACTS'],
+            'sicilian/2/richter-rauzer' => [Version20261016031600::class, 'RAUZER_FACTS'],
+            'sicilian/2/sozin-sherbakov' => [Version20261016031600::class, 'SOZIN_FACTS'],
+            'sicilian/2/scheveningen-classical' => [Version20261016031600::class, 'SCHEVENINGEN_FACTS'],
+            'sicilian/2/taimanov-modern' => [Version20261016031600::class, 'TAIMANOV_FACTS'],
+            'sicilian/2/alapin-endgame' => [Version20261016031600::class, 'ALAPIN_FACTS'],
+            'queens-gambit/3/exchange-reshevsky' => [Version20261016031700::class, 'EXCHANGE_FACTS'],
+            'queens-gambit/3/lasker-bernstein' => [Version20261016031700::class, 'BERNSTEIN_FACTS'],
+            'queens-gambit/3/tartakower-defense' => [Version20261016031700::class, 'TARTAKOWER_FACTS'],
+            'queens-gambit/3/cambridge-springs' => [Version20261016031700::class, 'CAMBRIDGE_FACTS'],
+            'catalan/2/closed-zagoryansky' => [Version20261016031800::class, 'ZAGORYANSKY_FACTS'],
+            'catalan/2/closed-spassky-gambit' => [Version20261016031800::class, 'SPASSKY_FACTS'],
+            'english/1/hedgehog-flexible-formation' => [Version20261016031900::class, 'HEDGEHOG_FACTS'],
+            'kings-indian/2/classical-main-line' => [Version20261016032000::class, 'CLASSICAL_FACTS'],
+            'kings-indian/2/bayonet-sokolov' => [Version20261016032000::class, 'BAYONET_FACTS'],
+            'kings-indian/2/petrosian-keres' => [Version20261016032000::class, 'PETROSIAN_FACTS'],
+            'kings-indian/2/positional-defense' => [Version20261016032000::class, 'POSITIONAL_FACTS'],
+            'kings-indian/2/samisch-bronstein' => [Version20261016032000::class, 'SAMISCH_FACTS'],
         ];
         foreach ($constants as $id => [$class, $constant]) {
             /** @var list<array{uci: string, san: string, fromKey: string, toKey: string}> $facts */
