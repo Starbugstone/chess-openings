@@ -37,10 +37,10 @@ try {
     $cli(['app:database:prepare',...($full ? [] : ['--source-directory=/app/backend/tests/Fixtures/Lessons/source'])]);
     if ($full) { $assert(3865 === (int)$db->fetchOne('SELECT COUNT(*) FROM opening_entry'),'Full pinned bootstrap source was not imported.'); }
     $assert(23 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson'),'Fresh bootstrap did not publish courses.');
-    $assert(151 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson_line') && 3080 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson_line_step'),'Finite curriculum path count wrong.');
+    $assert(150 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson_line') && 3056 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson_line_step'),'Finite curriculum path count wrong.');
     $assert(48 === (int)$db->fetchOne('SELECT COUNT(*) FROM doctrine_lesson_versions'),'Lesson history missing.');
     $cli(['app:database:prepare','--source-directory=/missing/retained-catalogue']);
-    $assert(1 === (int)$db->fetchOne('SELECT COUNT(*) FROM opening_import_batch') && 3080 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson_line_step'),'Bootstrap rerun changed source or lessons.');
+    $assert(1 === (int)$db->fetchOne('SELECT COUNT(*) FROM opening_import_batch') && 3056 === (int)$db->fetchOne('SELECT COUNT(*) FROM lesson_line_step'),'Bootstrap rerun changed source or lessons.');
     $graphWriter = new LessonGraphV1($db);
     $counts = $db->fetchAllKeyValue('SELECT \'positions\',COUNT(*) FROM authored_chess_position UNION ALL SELECT \'moves\',COUNT(*) FROM authored_chess_move');
     $assert((int)$counts['positions'] > 0 && (int)$counts['moves'] > 0,'London continuation has no separate authored provenance.');
@@ -107,7 +107,7 @@ try {
     $assert('b' === $caro['recommendedColor'] && 4 === $caro['revision'] && [24,19,19,24] === array_map(static fn(array $l): int => count($l['steps']),$caro['lines']) && 'O-O' === $caro['lines'][2]['steps'][18]['san'],'Black Caro-Kann lines unavailable.');
     $queensGambit = $get($a,'/api/lessons/queens-gambit')['lesson'];
     $assert(3 === $queensGambit['revision'] && [19,28,26,21,22,22,17] === array_map(static fn(array $l): int => count($l['steps']),$queensGambit['lines']) && 'Qxe5' === $queensGambit['lines'][1]['steps'][27]['san'],'Complete named Queen\'s Gambit lines were not published.');
-    $newCourses = ['ruy-lopez'=>['w',[28,24,36,24,22,24,18],2],'catalan'=>['w',[23,20,17,20],2],'sicilian'=>['b',[18,24,20,20,20,20,20,18],2],'kings-indian'=>['b',[27,26,19,21,18,24],2],'slav'=>['b',[19,29,22],3],'scotch'=>['w',[24,21,18,21],2],'four-knights'=>['w',[17,20,18,18],2],'evans-gambit'=>['w',[21,21,20,21],2],'petrov'=>['b',[20,18],1],'alekhine'=>['b',[22,21,20],2],'nimzo-indian'=>['b',[21,18,18,18],2],'grunfeld'=>['b',[26,21,20],2],'benoni'=>['b',[20,20,20,22],2],'tarrasch'=>['b',[22,18,19,20],2],'queens-indian'=>['b',[18,20],1],'semi-slav'=>['b',[22,21,20,21,19],1],'two-knights'=>['b',[20,19,26,22],1],'english'=>['w',[20],1]];
+    $newCourses = ['ruy-lopez'=>['w',[28,24,36,24,22,24,18],2],'catalan'=>['w',[23,20,17,20],2],'sicilian'=>['b',[18,24,20,20,20,20,20,18],2],'kings-indian'=>['b',[27,26,19,21,18],2],'slav'=>['b',[19,29,22],3],'scotch'=>['w',[24,21,18,21],2],'four-knights'=>['w',[17,20,18,18],2],'evans-gambit'=>['w',[21,21,20,21],2],'petrov'=>['b',[20,18],1],'alekhine'=>['b',[22,21,20],2],'nimzo-indian'=>['b',[21,18,18,18],2],'grunfeld'=>['b',[26,21,20],2],'benoni'=>['b',[20,20,20,22],2],'tarrasch'=>['b',[22,18,19,20],2],'queens-indian'=>['b',[18,20],1],'semi-slav'=>['b',[22,21,20,21,19],1],'two-knights'=>['b',[20,19,26,22],1],'english'=>['w',[20],1]];
     foreach ($newCourses as $courseId => [$color,$lengths,$revision]) {
         $course = $get($a,'/api/lessons/'.$courseId)['lesson'];
         $assert($revision === $course['revision'] && $color === $course['recommendedColor'] && $lengths === array_map(static fn(array $l): int => count($l['steps']),$course['lines']),'Complete named lines missing for '.$courseId.'.');

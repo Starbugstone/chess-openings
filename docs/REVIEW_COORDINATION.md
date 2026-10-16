@@ -681,3 +681,23 @@ The board-touch worktree's files are untouched. Per the harness rule I will publ
 - All sub-agents edited only ignored `artifacts/` files.
 
 **Reservations released.** The owner requested commit and push. Per the harness rule this is published on branch `curriculum/phase-6`, not directly on `main`.
+
+**Published (Claude/Opus):** commit `ae64276` is on branch `curriculum/phase-6` as [PR #17](https://github.com/Starbugstone/chess-openings/pull/17); it is not merged to `main`. Branch switches are disallowed here, so the shared checkout stays on `main` with identical uncommitted copies of the phase-6 files. After PR #17 merges, discard those copies (they match `origin/main`) and fast-forward. Preserve any coordination lines appended after this one.
+
+**Owner decision follow-up (Claude/Opus):** the owner asked for the most logical choice on the open questions, then merge and push to `main`.
+- **Sämisch Bronstein is dropped** from King's Indian revision 2. The documented editorial rule prefers mainstream theory over sharp sidelines, and a queen sacrifice should not be the course's only answer to the Sämisch.
+- **"Spassky System3" stays quoted exactly**, since source attribution must match the record.
+
+Re-reserving the phase-6 files (same list as above) for this amendment. King's Indian revision 2 is reset and re-applied on the shared dev DB; it had 0 completions. Then PR #17 gets a new commit, exact-head CI, and a merge.
+
+**Amendment verified (Claude/Opus):** the Sämisch Bronstein line is removed from `Version20261016032000`, along with its frozen-path case, its fixture row (e.tsv 335) and its 26 now-unused `lessons.json` keys. The King's Indian introduction is now five lines, with its FR/ES translations edited to match.
+- **Totals:** 23 courses, **91** current lines, **150** stored lines, **3,056** steps, 48 lesson migrations, 109 fixture rows, 728 net new `lessons.json` entries.
+- **Shared dev DB:** King's Indian revision 2 had 0 completions. It was reset in one transaction (pointer back to revision 1, revision-2 rows and the history row removed) and re-applied with `app:lessons:migrate` (93 queries); `/api/courses` lists 23 courses / 91 lines.
+- **Re-verified (exit 0):**
+  - PHPStan; php-cs-fixer
+  - PHPUnit 306 tests / 13,931 assertions (FrozenLessonPaths 105 / 13,137)
+  - disposable lesson 98, variation 109, practice 304 (two fewer line × colour contexts) and pinned-lessons 31
+  - `full-lessons-test.sh` 99
+  - frontend Prettier/ESLint/typecheck and 245 Vitest tests
+
+The amended commit goes to PR #17. The PR is merged after exact-head CI passes.

@@ -7135,9 +7135,9 @@
     "fr": "Les Noirs développent leur dernière pièce mineure. Depuis d7 le cavalier défend b6 et le cavalier f6, et pourra plus tard sauter en c5 ou e5. La formation flexible s’arrête ici, avec le roi noir encore au centre : il vous reste à développer le fou c1, relier vos tours et garder sous contrôle les percées ...b5 et ...d5 des Noirs.",
     "es": "Las negras desarrollan su última pieza menor. Desde d7 el caballo defiende b6 y el caballo de f6, y más tarde puede saltar a c5 o e5. La formación flexible termina aquí, con el rey negro aún en el centro: debes desarrollar tu alfil de c1, conectar tus torres y mantener bajo control las rupturas ...b5 y ...d5 de las negras."
   },
-  "Play Black against 1. d4 and 2. c4. In the King's Indian Defense you let White build a broad pawn centre, fianchetto your bishop on g7, castle and only then challenge the centre. Learn six complete named lines: the Classical main line, a race between your kingside storm and White's c4-c5; the Fianchetto Panno, with queenside play by ...a6, ...Rb8 and ...b5; the Bayonet Attack, where ...Nh5 answers b2-b4; the Petrosian, where ...h6 and ...g5 break a pin; the Positional Defense, keeping the tension with ...Nbd7, ...c6 and ...a5; and the Sämisch Bronstein, where you give up your queen for two bishops and two pawns. White replies automatically along the selected line; real opponents can choose other continuations.": {
-    "fr": "Jouez les Noirs contre 1. d4 et 2. c4. Dans la défense est-indienne, laissez les Blancs construire un large centre, placez le fou en g7 en fianchetto et roquez avant d’attaquer le centre. Apprenez six lignes complètes : la classique, une course entre votre assaut à l’aile roi et c4-c5 ; le fianchetto Panno, avec ...a6, ...Rb8 et ...b5 à l’aile dame ; l’attaque baïonnette, où ...Nh5 répond à b2-b4 ; la Petrosian, où ...h6 et ...g5 rompent un clouage ; la défense positionnelle, qui garde la tension par ...Nbd7, ...c6 et ...a5 ; et la Sämisch Bronstein, où vous donnez la dame pour deux fous et deux pions. Les Blancs répondent automatiquement dans la ligne choisie ; un adversaire réel peut choisir d’autres suites.",
-    "es": "Juega con negras contra 1. d4 y 2. c4. En la india de rey dejas a las blancas construir un centro amplio, colocas el alfil en g7 en fianchetto y enrocas antes de atacar el centro. Aprende seis líneas completas: la clásica, una carrera entre tu ataque de rey y c4-c5; el fianchetto Panno, con ...a6, ...Rb8 y ...b5 en el flanco de dama; el ataque bayoneta, donde ...Nh5 responde a b2-b4; la Petrosian, donde ...h6 y ...g5 rompen una clavada; la defensa posicional, que mantiene la tensión con ...Nbd7, ...c6 y ...a5; y la Sämisch Bronstein, donde entregas la dama por dos alfiles y dos peones. Las blancas responden automáticamente en la línea elegida; un rival real puede elegir otras continuaciones."
+  "Play Black against 1. d4 and 2. c4. In the King's Indian Defense you let White build a broad pawn centre, fianchetto your bishop on g7, castle and only then challenge the centre. Learn five complete named lines: the Classical main line, a race between your kingside storm and White's c4-c5; the Fianchetto Panno, with queenside play by ...a6, ...Rb8 and ...b5; the Bayonet Attack, where ...Nh5 answers b2-b4; the Petrosian, where ...h6 and ...g5 break a pin; and the Positional Defense, keeping the tension with ...Nbd7, ...c6 and ...a5. White replies automatically along the selected line; real opponents can choose other continuations.": {
+    "fr": "Jouez les Noirs contre 1. d4 et 2. c4. Dans la défense est-indienne, laissez les Blancs construire un large centre, placez le fou en g7 en fianchetto et roquez avant d’attaquer le centre. Apprenez cinq lignes complètes : la classique, une course entre votre assaut à l’aile roi et c4-c5 ; le fianchetto Panno, avec ...a6, ...Rb8 et ...b5 à l’aile dame ; l’attaque baïonnette, où ...Nh5 répond à b2-b4 ; la Petrosian, où ...h6 et ...g5 rompent un clouage ; et la défense positionnelle, qui garde la tension par ...Nbd7, ...c6 et ...a5. Les Blancs répondent automatiquement dans la ligne choisie ; un adversaire réel peut choisir d’autres suites.",
+    "es": "Juega con negras contra 1. d4 y 2. c4. En la india de rey dejas a las blancas construir un centro amplio, colocas el alfil en g7 en fianchetto y enrocas antes de atacar el centro. Aprende cinco líneas completas: la clásica, una carrera entre tu ataque de rey y c4-c5; el fianchetto Panno, con ...a6, ...Rb8 y ...b5 en el flanco de dama; el ataque bayoneta, donde ...Nh5 responde a b2-b4; la Petrosian, donde ...h6 y ...g5 rompen una clavada; y la defensa posicional, que mantiene la tensión con ...Nbd7, ...c6 y ...a5. Las blancas responden automáticamente en la línea elegida; un rival real puede elegir otras continuaciones."
   },
   "Develop the knight and add a second attacker to d4, alongside your pawn on e5. White usually settles the tension in the centre now.": {
     "fr": "Développez le cavalier et ajoutez une seconde attaque sur d4 avec le pion e5. Les Blancs résolvent généralement la tension centrale à ce stade.",
@@ -7246,110 +7246,6 @@
   "Gain space on the queenside. Your pawn on a5 controls b4, so White cannot easily expand with b2-b4 as in the Bayonet Attack, and a knight arriving on c5 would be hard to chase away with a b-pawn. The named Positional Defense Main Line ends here: your next tasks are to keep e5 well protected, decide whether to release the tension with ...exd4, and then use the e-file and the c5 square to put pressure on e4.": {
     "fr": "Gagnez de l’espace à l’aile dame. Votre pion a5 contrôle b4 : les Blancs ne peuvent pas facilement s’étendre par b2-b4 comme dans l’attaque baïonnette, et un cavalier arrivant en c5 serait difficile à chasser avec un pion b. La ligne principale de la défense positionnelle s’arrête ici : gardez e5 bien protégé, décidez s’il faut relâcher la tension par ...exd4, puis utilisez la colonne e et la case c5 pour presser e4.",
     "es": "Gana espacio en el flanco de dama. Tu peón de a5 controla b4, así que las blancas no pueden expandirse fácilmente con b2-b4 como en el ataque bayoneta, y un caballo que llegue a c5 sería difícil de expulsar con un peón b. La línea principal de la defensa posicional termina aquí: tus siguientes tareas son mantener bien protegido e5, decidir si liberas la tensión con ...exd4 y luego usar la columna e y la casilla c5 para presionar e4."
-  },
-  "Sämisch Bronstein: queen for two bishops and two pawns": {
-    "fr": "Sämisch Bronstein : la dame pour deux fous et deux pions",
-    "es": "Sämisch Bronstein: la dama por dos alfiles y dos peones"
-  },
-  "Twelve Black moves. Against White's f3 and Be3 setup, strike with ...e5, then use ...Nh5 and ...Qh4+ to give up your queen for both white bishops and two pawns. Source: Sämisch Variation, Orthodox Variation, Bronstein Variation.": {
-    "fr": "Douze coups noirs. Contre le dispositif blanc f3 et Be3, frappez par ...e5, puis utilisez ...Nh5 et ...Qh4+ pour donner votre dame contre les deux fous blancs et deux pions. Source : variante Sämisch, variante orthodoxe, variante Bronstein.",
-    "es": "Doce movimientos con negras. Contra el esquema blanco de f3 y Be3, golpea con ...e5 y usa ...Nh5 y ...Qh4+ para entregar tu dama por los dos alfiles blancos y dos peones. Fuente: variante Sämisch, variante ortodoxa, variante Bronstein."
-  },
-  "This is the Sämisch Variation. The pawn on f3 gives e4 solid support, and White can follow with Be3, Qd2 and even queenside castling. The cost: the knight on g1 loses its natural f3 square, and with the pawn gone from f2 the diagonal from h4 to White's king on e1 is open.": {
-    "fr": "C’est la variante Sämisch. Le pion f3 soutient solidement e4, et les Blancs peuvent poursuivre par Be3, Qd2 et même le grand roque. Le prix : le cavalier g1 perd sa case naturelle f3, et sans pion en f2, la diagonale de h4 au roi blanc e1 est ouverte.",
-    "es": "Es la variante Sämisch. El peón de f3 da un apoyo sólido a e4, y las blancas pueden seguir con Be3, Qd2 e incluso el enroque largo. El precio: el caballo de g1 pierde su casilla natural f3 y, sin el peón de f2, la diagonal de h4 al rey blanco de e1 está abierta."
-  },
-  "Castle as usual. Your king is safe behind the fianchetto, and you keep the choice between striking at the centre with ...e5 or ...c5.": {
-    "fr": "Roquez comme d’habitude. Votre roi est à l’abri derrière le fianchetto, et vous gardez le choix entre frapper le centre par ...e5 ou par ...c5.",
-    "es": "Enroca como de costumbre. Tu rey está seguro detrás del fianchetto y mantienes la opción de golpear el centro con ...e5 o ...c5."
-  },
-  "White develops the bishop to e3, where it defends d4. With a queen on d2 behind it, the bishop could later go to h6 to exchange your bishop on g7, the main defender of your king.": {
-    "fr": "Les Blancs développent le fou en e3, où il défend d4. Avec une dame en d2 derrière lui, le fou pourrait plus tard aller en h6 pour échanger votre fou g7, principal défenseur de votre roi.",
-    "es": "Las blancas desarrollan el alfil a e3, donde defiende d4. Con una dama en d2 detrás, el alfil podría ir más adelante a h6 para cambiar tu alfil de g7, el principal defensor de tu rey."
-  },
-  "Strike at the centre with your e-pawn, supported by the pawn on d6. It attacks d4, which the bishop on e3 and the queen on d1 defend, and White must decide what to do about the tension.": {
-    "fr": "Frappez le centre avec votre pion e, soutenu par le pion d6. Il attaque d4, que défendent le fou e3 et la dame d1, et les Blancs doivent décider quoi faire de la tension.",
-    "es": "Golpea el centro con tu peón e, apoyado por el peón de d6. Ataca d4, que defienden el alfil de e3 y la dama de d1, y las blancas deben decidir qué hacer con la tensión."
-  },
-  "White closes the centre and gains space. With the centre locked, your natural pawn break is ...f5 against White's chain, and White's king is still on e1.": {
-    "fr": "Les Blancs ferment le centre et gagnent de l’espace. Le centre étant bloqué, votre percée naturelle est ...f5 contre la chaîne blanche, et le roi blanc est encore en e1.",
-    "es": "Las blancas cierran el centro y ganan espacio. Con el centro bloqueado, tu ruptura natural es ...f5 contra la cadena blanca, y el rey blanco sigue en e1."
-  },
-  "Move the knight off f6, which prepares ...f5. It also clears the diagonal from d8 to h4 for your queen, and because White's f-pawn has left f2, a queen on h4 would give check to the king on e1.": {
-    "fr": "Libérez f6, ce qui prépare ...f5. Cela dégage aussi la diagonale de d8 à h4 pour votre dame, et comme le pion f blanc a quitté f2, une dame en h4 donnerait échec au roi e1.",
-    "es": "Libera f6, lo que prepara ...f5. También despeja la diagonal de d8 a h4 para tu dama y, como el peón f blanco ha dejado f2, una dama en h4 daría jaque al rey de e1."
-  },
-  "White develops the queen behind the bishop on e3, preparing Bh6 and queenside castling. It does nothing to stop the check you now give on h4.": {
-    "fr": "Les Blancs développent la dame derrière le fou e3 et préparent Bh6 et le grand roque. Ce coup n’empêche en rien l’échec que vous donnez maintenant en h4.",
-    "es": "Las blancas desarrollan la dama detrás del alfil de e3, preparando Bh6 y el enroque largo. No hace nada para impedir el jaque que ahora das en h4."
-  },
-  "Move your queen from d8 to h4, giving check.": {
-    "fr": "Déplacez votre dame de d8 en h4 avec échec.",
-    "es": "Mueve tu dama de d8 a h4 con jaque."
-  },
-  "Give check: ...Nh5 cleared your queen's path to h4, and f2-f3 opened the diagonal from h4 to White's king. Your queen also defends the knight on h5 and attacks the pawns on e4 and h2. White has to answer the check.": {
-    "fr": "Donnez échec : ...Nh5 a dégagé le chemin de votre dame vers h4, et f2-f3 a ouvert la diagonale de h4 au roi blanc. Votre dame défend aussi le cavalier h5 et attaque les pions e4 et h2. Les Blancs doivent parer l’échec.",
-    "es": "Da jaque: ...Nh5 despejó el camino de tu dama a h4, y f2-f3 abrió la diagonal de h4 al rey blanco. Tu dama también defiende el caballo de h5 y ataca los peones de e4 y h2. Las blancas deben responder al jaque."
-  },
-  "White blocks the check with the g-pawn, which now attacks your queen. The pawn is pinned to the king, but taking your queen keeps it on the same diagonal, so the capture is legal. Nothing defends your queen on h4, so you have to act at once.": {
-    "fr": "Les Blancs parent l’échec avec le pion g, qui attaque maintenant votre dame. Le pion est cloué au roi, mais en prenant votre dame il resterait sur la même diagonale : la prise est donc légale. Rien ne défend votre dame h4 : vous devez agir immédiatement.",
-    "es": "Las blancas cubren el jaque con el peón g, que ahora ataca tu dama. El peón está clavado al rey, pero al capturar tu dama seguiría en la misma diagonal, así que la captura es legal. Nada defiende tu dama de h4, así que debes actuar de inmediato."
-  },
-  "Move your knight from h5 to g3, capturing the white pawn.": {
-    "fr": "Déplacez votre cavalier de h5 en g3, en capturant le pion blanc.",
-    "es": "Mueve tu caballo de h5 a g3, capturando el peón blanco."
-  },
-  "Take the pawn with your knight. This removes the attacker of your queen, and the knight now attacks the bishop on f1 and the rook on h1. Your queen defends the knight: if White takes it with the h-pawn, the h-file opens and your queen can capture the rook on h1.": {
-    "fr": "Prenez le pion avec votre cavalier. Vous éliminez ainsi l’attaquant de votre dame, et le cavalier attaque maintenant le fou f1 et la tour h1. Votre dame défend le cavalier : si les Blancs le prennent avec le pion h, la colonne h s’ouvre et votre dame peut prendre la tour h1.",
-    "es": "Captura el peón con tu caballo. Así eliminas al atacante de tu dama, y el caballo ataca ahora al alfil de f1 y a la torre de h1. Tu dama defiende el caballo: si las blancas lo capturan con el peón h, se abre la columna h y tu dama puede capturar la torre de h1."
-  },
-  "Move your queen from d2 to f2.": {
-    "fr": "Déplacez votre dame de d2 en f2.",
-    "es": "Mueve tu dama de d2 a f2."
-  },
-  "White attacks your knight a second time with the queen, which also defends the bishop on f1 and the pawn on h2. The two queens now stand on the same diagonal, with only your knight on g3 between them.": {
-    "fr": "Les Blancs attaquent une seconde fois votre cavalier avec la dame, qui défend aussi le fou f1 et le pion h2. Les deux dames se trouvent maintenant sur la même diagonale, avec seulement votre cavalier g3 entre elles.",
-    "es": "Las blancas atacan por segunda vez tu caballo con la dama, que también defiende el alfil de f1 y el peón de h2. Las dos damas están ahora en la misma diagonal, con solo tu caballo de g3 entre ellas."
-  },
-  "Move your knight from g3 to f1, capturing the white bishop.": {
-    "fr": "Déplacez votre cavalier de g3 en f1, en capturant le fou blanc.",
-    "es": "Mueve tu caballo de g3 a f1, capturando el alfil blanco."
-  },
-  "This is the point of the Bronstein Variation: take the bishop on f1. The queens now attack each other, and White's queen is pinned to the king, so it cannot capture your knight. In this line White takes your queen, but your knight goes on to win the bishop on e3 as well.": {
-    "fr": "C’est toute l’idée de la variante Bronstein : prenez le fou f1. Les dames s’attaquent maintenant mutuellement, et la dame blanche est clouée au roi : elle ne peut pas prendre votre cavalier. Dans cette ligne, les Blancs prennent votre dame, mais votre cavalier gagne ensuite aussi le fou e3.",
-    "es": "Esta es la idea de la variante Bronstein: captura el alfil de f1. Las damas se atacan ahora mutuamente, y la dama blanca está clavada al rey, así que no puede capturar tu caballo. En esta línea las blancas capturan tu dama, pero tu caballo gana después también el alfil de e3."
-  },
-  "Move your queen from f2 to h4, capturing the black queen.": {
-    "fr": "Déplacez votre dame de f2 en h4, en capturant la dame noire.",
-    "es": "Mueve tu dama de f2 a h4, capturando la dama negra."
-  },
-  "White captures your queen. The king on e1 attacks your knight on f1, but the knight can escape with a capture: the bishop on e3 has lost its only defender.": {
-    "fr": "Les Blancs prennent votre dame. Le roi e1 attaque votre cavalier f1, mais le cavalier peut s’échapper en capturant : le fou e3 a perdu son seul défenseur.",
-    "es": "Las blancas capturan tu dama. El rey de e1 ataca tu caballo de f1, pero el caballo puede escapar capturando: el alfil de e3 ha perdido su único defensor."
-  },
-  "Move your knight from f1 to e3, capturing the white bishop.": {
-    "fr": "Déplacez votre cavalier de f1 en e3, en capturant le fou blanc.",
-    "es": "Mueve tu caballo de f1 a e3, capturando el alfil blanco."
-  },
-  "Take the second bishop. White has no bishops left, and your knight now attacks the pawns on c4 and d5. So far you have given your queen for two bishops and a pawn.": {
-    "fr": "Prenez le second fou. Les Blancs n’ont plus de fous, et votre cavalier attaque maintenant les pions c4 et d5. Jusqu’ici, vous avez donné votre dame pour deux fous et un pion.",
-    "es": "Captura el segundo alfil. Las blancas ya no tienen alfiles, y tu caballo ataca ahora los peones de c4 y d5. Hasta ahora has entregado tu dama por dos alfiles y un peón."
-  },
-  "Move your king from e1 to e2.": {
-    "fr": "Déplacez votre roi de e1 en e2.",
-    "es": "Mueve tu rey de e1 a e2."
-  },
-  "White attacks your knight with the king. Having moved, the king can no longer castle and stands in the centre.": {
-    "fr": "Les Blancs attaquent votre cavalier avec le roi. Ayant bougé, le roi ne peut plus roquer et reste au centre.",
-    "es": "Las blancas atacan tu caballo con el rey. Al haberse movido, el rey ya no puede enrocar y queda en el centro."
-  },
-  "Move your knight from e3 to c4, capturing the white pawn.": {
-    "fr": "Déplacez votre cavalier de e3 en c4, en capturant le pion blanc.",
-    "es": "Mueve tu caballo de e3 a c4, capturando el peón blanco."
-  },
-  "Retreat the knight with a capture: the pawn on c4 had no defender. You have now won two bishops and two pawns for your queen, and the knight attacks the pawn on b2. The named Bronstein Variation ends here: your next tasks are to develop the knight on b8 and the bishop on c8, aim your minor pieces at White's king in the centre and watch the queen's attack on h7.": {
-    "fr": "Reculez le cavalier en capturant : le pion c4 n’avait pas de défenseur. Vous avez maintenant gagné deux fous et deux pions pour votre dame, et le cavalier attaque le pion b2. La variante Bronstein s’arrête ici : développez ensuite le cavalier b8 et le fou c8, dirigez vos pièces mineures vers le roi blanc resté au centre et surveillez l’attaque de la dame sur h7.",
-    "es": "Retira el caballo capturando: el peón de c4 no tenía defensor. Ya has ganado dos alfiles y dos peones por tu dama, y el caballo ataca el peón de b2. La variante Bronstein termina aquí: tus siguientes tareas son desarrollar el caballo de b8 y el alfil de c8, dirigir tus piezas menores contra el rey blanco en el centro y vigilar el ataque de la dama sobre h7."
   },
   "Queen's Indian Defense": {
     "fr": "Défense ouest-indienne",

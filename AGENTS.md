@@ -24,7 +24,7 @@ Read [README.md](README.md) for the product overview and **[docs/IMPLEMENTATION_
 
 ## Current implementation and next step
 
-**M0–M5, M6a/M6b, the approved admin area, English/French/Spanish (PR #12) and the visual redesign (PR #13) are on `main` and deployed**; see README, plan sections 12.2–12.10, [docs/PROGRESS.md](docs/PROGRESS.md), [docs/M4_IMPLEMENTATION.md](docs/M4_IMPLEMENTATION.md) and [docs/REVIEW_FIXES.md](docs/REVIEW_FIXES.md). Twenty-three courses/92 current lines: nine recommended for White and fourteen for Black. Every current line except London gives the learner at least nine moves; London's eight is the pinned-data limit. Course revisions:
+**M0–M5, M6a/M6b, the approved admin area, English/French/Spanish (PR #12) and the visual redesign (PR #13) are on `main` and deployed**; see README, plan sections 12.2–12.10, [docs/PROGRESS.md](docs/PROGRESS.md), [docs/M4_IMPLEMENTATION.md](docs/M4_IMPLEMENTATION.md) and [docs/REVIEW_FIXES.md](docs/REVIEW_FIXES.md). Twenty-three courses/91 current lines: nine recommended for White and fourteen for Black. Every current line except London gives the learner at least nine moves; London's eight is the pinned-data limit. Course revisions:
 - London and Italian: revision 3.
 - Caro-Kann and French: revision 4.
 - Queen's Gambit and Slav: revision 3.

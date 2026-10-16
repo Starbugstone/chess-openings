@@ -40,7 +40,7 @@ Retained lines are copied from the previous revision with `INSERT … SELECT` at
 | Sicilian | 2 | `Version20261016031600` | `richter-rauzer`, `sozin-sherbakov`, `scheveningen-classical`, `taimanov-modern`, `alapin-endgame` |
 | Queen's Gambit | 3 | `Version20261016031700` | `exchange-reshevsky`, `lasker-bernstein`, `tartakower-defense`, `cambridge-springs` |
 | Catalan | 2 | `Version20261016031800` | `closed-zagoryansky`, `closed-spassky-gambit` |
-| King's Indian | 2 | `Version20261016032000` | `bayonet-sokolov`, `petrosian-keres`, `positional-defense`, `samisch-bronstein` (plus one corrected line, below) |
+| King's Indian | 2 | `Version20261016032000` | `bayonet-sokolov`, `petrosian-keres`, `positional-defense` (plus one corrected line, below) |
 
 ## Corrections to published notes
 
@@ -55,7 +55,7 @@ The independent fact-check found statements in already-published lines that the 
 
 ## Source records
 
-Pinned dataset: [`lichess-org/chess-openings`](https://github.com/lichess-org/chess-openings) at `a6189a30dc273ccb21fc2536a9a2fefd5592a67a` (CC0). Row numbers count the header as row 1. The exact PGNs are in each migration's `*_SOURCE` constants. The 48 records not already present are appended unchanged to `backend/tests/Fixtures/Lessons/source/*.tsv`. The re-authored lines' records were already there.
+Pinned dataset: [`lichess-org/chess-openings`](https://github.com/lichess-org/chess-openings) at `a6189a30dc273ccb21fc2536a9a2fefd5592a67a` (CC0). Row numbers count the header as row 1. The exact PGNs are in each migration's `*_SOURCE` constants. The 47 records not already present are appended unchanged to `backend/tests/Fixtures/Lessons/source/*.tsv`. The re-authored lines' records were already there.
 
 | Line | File, row | ECO | Exact name | Plies | Learner moves |
 | --- | --- | --- | --- | --- | --- |
@@ -109,7 +109,6 @@ Pinned dataset: [`lichess-org/chess-openings`](https://github.com/lichess-org/ch
 | `kings-indian/2/bayonet-sokolov` | `e.tsv` 360 | E97 | King's Indian Defense: Orthodox Variation, Bayonet Attack, Sokolov's Line | 19 | 9 |
 | `kings-indian/2/petrosian-keres` | `e.tsv` 348 | E93 | King's Indian Defense: Petrosian Variation, Keres Defense | 21 | 10 |
 | `kings-indian/2/positional-defense` | `e.tsv` 357 | E96 | King's Indian Defense: Orthodox Variation, Positional Defense, Main Line | 18 | 9 |
-| `kings-indian/2/samisch-bronstein` | `e.tsv` 335 | E87 | King's Indian Defense: Sämisch Variation, Orthodox Variation, Bronstein Variation | 24 | 12 |
 
 ## Editorial choices
 
@@ -119,8 +118,8 @@ Pinned dataset: [`lichess-org/chess-openings`](https://github.com/lichess-org/ch
   - The Queen's Gambit adds the Exchange, Lasker, Tartakower and Cambridge Springs.
   - Traps, mates and gambit sidelines were skipped, as were records ending in a forced sequence the learner never answers.
 - **Sharp lines.**
-  - **Sämisch Bronstein (King's Indian):** the only Sämisch record long enough. Black gives the queen for both bishops and two pawns. The notes state the material at each step and present it as a plan with a cost.
-  - **Spassky Gambit (Catalan), Evans Gambit and Max Lange lines:** presented the same way.
+  - **Sämisch Bronstein (King's Indian):** drafted and fact-checked, then left out. It is the only Sämisch record long enough, but Black gives the queen for both bishops and two pawns. As the course's only answer to the Sämisch, it would present a sharp sideline as the standard reply, against the rule of mainstream theory first.
+  - **Spassky Gambit (Catalan), Evans Gambit and Max Lange lines:** presented as plans with a cost, with the material stated where it changes.
 - **Single-line course.** The English Opening has one record of 17+ plies (Symmetrical, Hedgehog, Flexible Formation), so it is a single-line course, as London is. Its introduction says so.
 - **Catalogue name quirk.** The pinned name "Queen's Indian Defense: Spassky System3" contains a literal "3". It is quoted exactly, marked as the exact catalogue name.
 - **Line order.**
@@ -133,5 +132,5 @@ Pinned dataset: [`lichess-org/chess-openings`](https://github.com/lichess-org/ch
 
 - **Authoring.** Ten authoring agents wrote the lines from exact catalogue facts. A board-analysis helper listed attacks, defenders, pins and material at every ply.
 - **Fact-check.** Independent agents fact-checked every new explanation against that board output and corrected dozens of over-strong or wrong claims before translation.
-- **Translation.** Separate agents translated 754 new strings into French and Spanish. A mechanical-hint generator reproduced all 234 existing hint translations byte for byte before filling new hints.
+- **Translation.** Separate agents translated the new strings into French and Spanish (728 new `lessons.json` entries). A mechanical-hint generator reproduced all 234 existing hint translations byte for byte before filling new hints.
 - **Verification.** Exact commands and results are recorded in [REVIEW_COORDINATION.md](../REVIEW_COORDINATION.md) (phase-4 sections) and the [curriculum review addendum](../CURRICULUM_REVIEW.md).

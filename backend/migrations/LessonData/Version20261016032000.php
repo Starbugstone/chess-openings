@@ -17,7 +17,6 @@ final class Version20261016032000 extends AbstractMigration
     public const BAYONET_SOURCE = '1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7 9. b4 Nh5 10. Re1';
     public const PETROSIAN_SOURCE = '1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. d5 Nbd7 8. Bg5 h6 9. Bh4 g5 10. Bg3 Nh5 11. h4';
     public const POSITIONAL_SOURCE = '1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nbd7 8. Re1 c6 9. Bf1 a5';
-    public const SAMISCH_SOURCE = '1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5 7. d5 Nh5 8. Qd2 Qh4+ 9. g3 Nxg3 10. Qf2 Nxf1 11. Qxh4 Nxe3 12. Ke2 Nxc4';
     /** @var array<string, array{int, int}> retained line => [previous ply count, new sort order] */
     private const KEPT_LINES = ['fianchetto-panno' => [26, 1]];
 
@@ -118,36 +117,9 @@ final class Version20261016032000 extends AbstractMigration
         ['uci' => 'a7a5', 'san' => 'a5', 'fromKey' => 'r1bq1rk1/pp1n1pbp/2pp1np1/4p3/2PPP3/2N2N2/PP3PPP/R1BQRBK1 b - -', 'toKey' => 'r1bq1rk1/1p1n1pbp/2pp1np1/p3p3/2PPP3/2N2N2/PP3PPP/R1BQRBK1 w - -'],
     ];
 
-    public const SAMISCH_FACTS = [
-        ['uci' => 'd2d4', 'san' => 'd4', 'fromKey' => 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -', 'toKey' => 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq -'],
-        ['uci' => 'g8f6', 'san' => 'Nf6', 'fromKey' => 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq -', 'toKey' => 'rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -'],
-        ['uci' => 'c2c4', 'san' => 'c4', 'fromKey' => 'rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -', 'toKey' => 'rnbqkb1r/pppppppp/5n2/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq -'],
-        ['uci' => 'g7g6', 'san' => 'g6', 'fromKey' => 'rnbqkb1r/pppppppp/5n2/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq -', 'toKey' => 'rnbqkb1r/pppppp1p/5np1/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq -'],
-        ['uci' => 'b1c3', 'san' => 'Nc3', 'fromKey' => 'rnbqkb1r/pppppp1p/5np1/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq -', 'toKey' => 'rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq -'],
-        ['uci' => 'f8g7', 'san' => 'Bg7', 'fromKey' => 'rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq -', 'toKey' => 'rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq -'],
-        ['uci' => 'e2e4', 'san' => 'e4', 'fromKey' => 'rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq -', 'toKey' => 'rnbqk2r/ppppppbp/5np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq -'],
-        ['uci' => 'd7d6', 'san' => 'd6', 'fromKey' => 'rnbqk2r/ppppppbp/5np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq -', 'toKey' => 'rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq -'],
-        ['uci' => 'f2f3', 'san' => 'f3', 'fromKey' => 'rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq -', 'toKey' => 'rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR b KQkq -'],
-        ['uci' => 'e8g8', 'san' => 'O-O', 'fromKey' => 'rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR b KQkq -', 'toKey' => 'rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR w KQ -'],
-        ['uci' => 'c1e3', 'san' => 'Be3', 'fromKey' => 'rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR w KQ -', 'toKey' => 'rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N1BP2/PP4PP/R2QKBNR b KQ -'],
-        ['uci' => 'e7e5', 'san' => 'e5', 'fromKey' => 'rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N1BP2/PP4PP/R2QKBNR b KQ -', 'toKey' => 'rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -'],
-        ['uci' => 'd4d5', 'san' => 'd5', 'fromKey' => 'rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BP2/PP4PP/R2QKBNR w KQ -', 'toKey' => 'rnbq1rk1/ppp2pbp/3p1np1/3Pp3/2P1P3/2N1BP2/PP4PP/R2QKBNR b KQ -'],
-        ['uci' => 'f6h5', 'san' => 'Nh5', 'fromKey' => 'rnbq1rk1/ppp2pbp/3p1np1/3Pp3/2P1P3/2N1BP2/PP4PP/R2QKBNR b KQ -', 'toKey' => 'rnbq1rk1/ppp2pbp/3p2p1/3Pp2n/2P1P3/2N1BP2/PP4PP/R2QKBNR w KQ -'],
-        ['uci' => 'd1d2', 'san' => 'Qd2', 'fromKey' => 'rnbq1rk1/ppp2pbp/3p2p1/3Pp2n/2P1P3/2N1BP2/PP4PP/R2QKBNR w KQ -', 'toKey' => 'rnbq1rk1/ppp2pbp/3p2p1/3Pp2n/2P1P3/2N1BP2/PP1Q2PP/R3KBNR b KQ -'],
-        ['uci' => 'd8h4', 'san' => 'Qh4+', 'fromKey' => 'rnbq1rk1/ppp2pbp/3p2p1/3Pp2n/2P1P3/2N1BP2/PP1Q2PP/R3KBNR b KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp2n/2P1P2q/2N1BP2/PP1Q2PP/R3KBNR w KQ -'],
-        ['uci' => 'g2g3', 'san' => 'g3', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp2n/2P1P2q/2N1BP2/PP1Q2PP/R3KBNR w KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp2n/2P1P2q/2N1BPP1/PP1Q3P/R3KBNR b KQ -'],
-        ['uci' => 'h5g3', 'san' => 'Nxg3', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp2n/2P1P2q/2N1BPP1/PP1Q3P/R3KBNR b KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2q/2N1BPn1/PP1Q3P/R3KBNR w KQ -'],
-        ['uci' => 'd2f2', 'san' => 'Qf2', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2q/2N1BPn1/PP1Q3P/R3KBNR w KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2q/2N1BPn1/PP3Q1P/R3KBNR b KQ -'],
-        ['uci' => 'g3f1', 'san' => 'Nxf1', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2q/2N1BPn1/PP3Q1P/R3KBNR b KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2q/2N1BP2/PP3Q1P/R3KnNR w KQ -'],
-        ['uci' => 'f2h4', 'san' => 'Qxh4', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2q/2N1BP2/PP3Q1P/R3KnNR w KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2Q/2N1BP2/PP5P/R3KnNR b KQ -'],
-        ['uci' => 'f1e3', 'san' => 'Nxe3', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2Q/2N1BP2/PP5P/R3KnNR b KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2Q/2N1nP2/PP5P/R3K1NR w KQ -'],
-        ['uci' => 'e1e2', 'san' => 'Ke2', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2Q/2N1nP2/PP5P/R3K1NR w KQ -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2Q/2N1nP2/PP2K2P/R5NR b - -'],
-        ['uci' => 'e3c4', 'san' => 'Nxc4', 'fromKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2P1P2Q/2N1nP2/PP2K2P/R5NR b - -', 'toKey' => 'rnb2rk1/ppp2pbp/3p2p1/3Pp3/2n1P2Q/2N2P2/PP2K2P/R5NR w - -'],
-    ];
-
     public function getDescription(): string
     {
-        return 'Publish King\'s Indian Defense revision 2: correct the classical-main-line Nc6 note, add bayonet-sokolov, petrosian-keres, positional-defense, samisch-bronstein';
+        return 'Publish King\'s Indian Defense revision 2: correct the classical-main-line Nc6 note, add bayonet-sokolov, petrosian-keres, positional-defense';
     }
 
     public function isTransactional(): bool
@@ -157,7 +129,7 @@ final class Version20261016032000 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        $introduction = "Play Black against 1. d4 and 2. c4. In the King's Indian Defense you let White build a broad pawn centre, fianchetto your bishop on g7, castle and only then challenge the centre. Learn six complete named lines: the Classical main line, a race between your kingside storm and White's c4-c5; the Fianchetto Panno, with queenside play by ...a6, ...Rb8 and ...b5; the Bayonet Attack, where ...Nh5 answers b2-b4; the Petrosian, where ...h6 and ...g5 break a pin; the Positional Defense, keeping the tension with ...Nbd7, ...c6 and ...a5; and the Sämisch Bronstein, where you give up your queen for two bishops and two pawns. White replies automatically along the selected line; real opponents can choose other continuations.";
+        $introduction = "Play Black against 1. d4 and 2. c4. In the King's Indian Defense you let White build a broad pawn centre, fianchetto your bishop on g7, castle and only then challenge the centre. Learn five complete named lines: the Classical main line, a race between your kingside storm and White's c4-c5; the Fianchetto Panno, with queenside play by ...a6, ...Rb8 and ...b5; the Bayonet Attack, where ...Nh5 answers b2-b4; the Petrosian, where ...h6 and ...g5 break a pin; and the Positional Defense, keeping the tension with ...Nbd7, ...c6 and ...a5. White replies automatically along the selected line; real opponents can choose other continuations.";
         /** @var list<array{string, string, string, int, string, list<array{uci: string, san: string, fromKey: string, toKey: string}>, list<array{string, string, string}>}> $lines */
         $lines = [
             ['classical-main-line', 'Classical main line: kingside storm against queenside break', 'Thirteen Black moves. Fianchetto, castle and strike with ...e5, reroute your knights after White closes the centre, then push ...f5, ...f4 and ...g5 while White breaks with c4-c5. Source: Orthodox Variation, Classical System, Kozul Gambit.', 0, self::CLASSICAL_SOURCE, self::CLASSICAL_FACTS, [
@@ -252,32 +224,6 @@ final class Version20261016032000 extends AbstractMigration
                 ['c6', 'Move your pawn from c7 to c6.', 'Take control of d5 and b5 with your c-pawn, so the knight on c3 cannot settle on either square. The move also opens the diagonal from d8 to a5, so your queen can later come to b6 or a5.'],
                 ['Bf1', 'Move your bishop from e2 to f1.', 'White retreats the bishop to f1. The rook on e1 now defends e4 directly, and from f1 the bishop still protects c4 and g2. White keeps a solid centre and waits for you to show your plan.'],
                 ['a5', 'Move your pawn from a7 to a5.', 'Gain space on the queenside. Your pawn on a5 controls b4, so White cannot easily expand with b2-b4 as in the Bayonet Attack, and a knight arriving on c5 would be hard to chase away with a b-pawn. The named Positional Defense Main Line ends here: your next tasks are to keep e5 well protected, decide whether to release the tension with ...exd4, and then use the e-file and the c5 square to put pressure on e4.'],
-            ]],
-            ['samisch-bronstein', 'Sämisch Bronstein: queen for two bishops and two pawns', 'Twelve Black moves. Against White\'s f3 and Be3 setup, strike with ...e5, then use ...Nh5 and ...Qh4+ to give up your queen for both white bishops and two pawns. Source: Sämisch Variation, Orthodox Variation, Bronstein Variation.', 5, self::SAMISCH_SOURCE, self::SAMISCH_FACTS, [
-                ['d4', 'Move your pawn from d2 to d4.', 'White takes space in the centre and opens a diagonal for the bishop on c1.'],
-                ['Nf6', 'Move your knight from g8 to f6.', "Develop the knight to a square where it controls e4 and d5. You do not occupy the centre with a pawn yet: this flexible, hypermodern approach is the basis of the King's Indian."],
-                ['c4', 'Move your pawn from c2 to c4.', 'White gains space on the queenside and adds control of d5.'],
-                ['g6', 'Move your pawn from g7 to g6.', "Prepare to fianchetto your bishop on g7. From there it will work along the long diagonal towards White's centre and queenside."],
-                ['Nc3', 'Move your knight from b1 to c3.', 'White develops the knight, controls d5 and e4, and prepares to play e2-e4.'],
-                ['Bg7', 'Move your bishop from f8 to g7.', 'Complete the fianchetto. Once the knight on f6 moves, the bishop will look straight down the long diagonal towards d4. Your king can now castle quickly.'],
-                ['e4', 'Move your pawn from e2 to e4.', "White builds a big pawn centre on c4, d4 and e4. In the King's Indian you allow this, planning to challenge the centre once your king is safe."],
-                ['d6', 'Move your pawn from d7 to d6.', 'Control e5, so White cannot simply push e4-e5 to chase your knight. The pawn also prepares ...e5 and opens a path for the bishop on c8.'],
-                ['f3', 'Move your pawn from f2 to f3.', 'This is the Sämisch Variation. The pawn on f3 gives e4 solid support, and White can follow with Be3, Qd2 and even queenside castling. The cost: the knight on g1 loses its natural f3 square, and with the pawn gone from f2 the diagonal from h4 to White\'s king on e1 is open.'],
-                ['O-O', 'Castle: move your king from e8 to g8. The rook moves from h8 to f8 automatically.', 'Castle as usual. Your king is safe behind the fianchetto, and you keep the choice between striking at the centre with ...e5 or ...c5.'],
-                ['Be3', 'Move your bishop from c1 to e3.', 'White develops the bishop to e3, where it defends d4. With a queen on d2 behind it, the bishop could later go to h6 to exchange your bishop on g7, the main defender of your king.'],
-                ['e5', 'Move your pawn from e7 to e5.', 'Strike at the centre with your e-pawn, supported by the pawn on d6. It attacks d4, which the bishop on e3 and the queen on d1 defend, and White must decide what to do about the tension.'],
-                ['d5', 'Move your pawn from d4 to d5.', 'White closes the centre and gains space. With the centre locked, your natural pawn break is ...f5 against White\'s chain, and White\'s king is still on e1.'],
-                ['Nh5', 'Move your knight from f6 to h5.', 'Move the knight off f6, which prepares ...f5. It also clears the diagonal from d8 to h4 for your queen, and because White\'s f-pawn has left f2, a queen on h4 would give check to the king on e1.'],
-                ['Qd2', 'Move your queen from d1 to d2.', 'White develops the queen behind the bishop on e3, preparing Bh6 and queenside castling. It does nothing to stop the check you now give on h4.'],
-                ['Qh4+', 'Move your queen from d8 to h4, giving check.', 'Give check: ...Nh5 cleared your queen\'s path to h4, and f2-f3 opened the diagonal from h4 to White\'s king. Your queen also defends the knight on h5 and attacks the pawns on e4 and h2. White has to answer the check.'],
-                ['g3', 'Move your pawn from g2 to g3.', 'White blocks the check with the g-pawn, which now attacks your queen. The pawn is pinned to the king, but taking your queen keeps it on the same diagonal, so the capture is legal. Nothing defends your queen on h4, so you have to act at once.'],
-                ['Nxg3', 'Move your knight from h5 to g3, capturing the white pawn.', 'Take the pawn with your knight. This removes the attacker of your queen, and the knight now attacks the bishop on f1 and the rook on h1. Your queen defends the knight: if White takes it with the h-pawn, the h-file opens and your queen can capture the rook on h1.'],
-                ['Qf2', 'Move your queen from d2 to f2.', 'White attacks your knight a second time with the queen, which also defends the bishop on f1 and the pawn on h2. The two queens now stand on the same diagonal, with only your knight on g3 between them.'],
-                ['Nxf1', 'Move your knight from g3 to f1, capturing the white bishop.', 'This is the point of the Bronstein Variation: take the bishop on f1. The queens now attack each other, and White\'s queen is pinned to the king, so it cannot capture your knight. In this line White takes your queen, but your knight goes on to win the bishop on e3 as well.'],
-                ['Qxh4', 'Move your queen from f2 to h4, capturing the black queen.', 'White captures your queen. The king on e1 attacks your knight on f1, but the knight can escape with a capture: the bishop on e3 has lost its only defender.'],
-                ['Nxe3', 'Move your knight from f1 to e3, capturing the white bishop.', 'Take the second bishop. White has no bishops left, and your knight now attacks the pawns on c4 and d5. So far you have given your queen for two bishops and a pawn.'],
-                ['Ke2', 'Move your king from e1 to e2.', 'White attacks your knight with the king. Having moved, the king can no longer castle and stands in the centre.'],
-                ['Nxc4', 'Move your knight from e3 to c4, capturing the white pawn.', 'Retreat the knight with a capture: the pawn on c4 had no defender. You have now won two bishops and two pawns for your queen, and the knight attacks the pawn on b2. The named Bronstein Variation ends here: your next tasks are to develop the knight on b8 and the bishop on c8, aim your minor pieces at White\'s king in the centre and watch the queen\'s attack on h7.'],
             ]],
         ];
 

@@ -160,7 +160,6 @@ final class FrozenLessonPathsTest extends TestCase
         'kings-indian/2/bayonet-sokolov' => [19, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7 b4 Nh5 Re1'],
         'kings-indian/2/petrosian-keres' => [21, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 d5 Nbd7 Bg5 h6 Bh4 g5 Bg3 Nh5 h4'],
         'kings-indian/2/positional-defense' => [18, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nbd7 Re1 c6 Bf1 a5'],
-        'kings-indian/2/samisch-bronstein' => [24, 'd4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f3 O-O Be3 e5 d5 Nh5 Qd2 Qh4+ g3 Nxg3 Qf2 Nxf1 Qxh4 Nxe3 Ke2 Nxc4'],
     ];
 
     /** @return iterable<string, array{list<array{uci: string, san: string, fromKey: string, toKey: string}>, int, string}> */
@@ -372,7 +371,6 @@ final class FrozenLessonPathsTest extends TestCase
             'kings-indian/2/bayonet-sokolov' => [Version20261016032000::class, 'BAYONET_FACTS'],
             'kings-indian/2/petrosian-keres' => [Version20261016032000::class, 'PETROSIAN_FACTS'],
             'kings-indian/2/positional-defense' => [Version20261016032000::class, 'POSITIONAL_FACTS'],
-            'kings-indian/2/samisch-bronstein' => [Version20261016032000::class, 'SAMISCH_FACTS'],
         ];
         foreach ($constants as $id => [$class, $constant]) {
             /** @var list<array{uci: string, san: string, fromKey: string, toKey: string}> $facts */
