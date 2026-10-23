@@ -1,4 +1,4 @@
-FROM php:8.3.30-apache-bookworm
+FROM php:8.5.0-apache-bookworm
 RUN apt-get update && apt-get install -y --no-install-recommends libicu-dev libxml2-dev libonig-dev unzip git curl python3 mariadb-client \
     && docker-php-ext-install intl pdo_mysql opcache dom xml mbstring \
     && a2enmod rewrite headers \
