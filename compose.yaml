@@ -71,7 +71,7 @@ services:
       - "127.0.0.1:${MAIL_PORT:-8025}:8025"
 
   browser:
-    image: mcr.microsoft.com/playwright:v1.64.1-noble
+    image: mcr.microsoft.com/playwright:v1.65.0-noble
     profiles: [test]
     working_dir: /app/frontend
     user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
